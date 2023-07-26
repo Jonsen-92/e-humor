@@ -98,7 +98,7 @@
     {
         var nip = $('#DataCutiPegawaiNip').val();
         var tahun = $('#DataCutiPegawaiTahun').val();
-        $.getJSON('/edaran/proses/data_cuti_pegawais/getData/'+nip+'/'+tahun, function(data){
+        $.getJSON('<?php echo $url; ?>/proses/data_cuti_pegawais/getData/'+nip+'/'+tahun, function(data){
             if(data){
                 Swal.fire(
 							'Data Cuti untuk tahun '+tahun+' sudah ada',

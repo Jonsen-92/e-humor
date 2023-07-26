@@ -105,13 +105,13 @@
     function sisaCuti(val)
     {
         var data = 0;
-        $.getJSON('/edaran/proses/pengajuan_cutis/getNamaCuti/'+val, function(desc){
+        $.getJSON('<?php echo $url; ?>/proses/pengajuan_cutis/getNamaCuti/'+val, function(desc){
             $('#PengajuanCutiDescJenisCuti').val(desc);
 		})
 
         if(val == 'CT'){
             var nip = $('#PengajuanCutiNip').val();
-		    $.getJSON('/edaran/proses/pengajuan_cutis/getSisaCuti/'+nip, function(data){
+		    $.getJSON('<?php echo $url; ?>/proses/pengajuan_cutis/getSisaCuti/'+nip, function(data){
                 if(data){
                     $('#PengajuanCutiSisaCuti').val(data+' Hari').show();
                     $('#labelsisacuti').show();

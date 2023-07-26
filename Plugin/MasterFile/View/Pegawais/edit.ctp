@@ -88,7 +88,7 @@
 	function validateNip()
 	{
 		var nip = $('#PegawaiNip').val();
-		$.getJSON('/edaran/master_file/pegawais/getNip/'+nip, function(data){
+		$.getJSON('<?php echo $url; ?>/master_file/pegawais/getNip/'+nip, function(data){
 			if(data){
 				Swal.fire(
 							'NIP '+nip+' sudah terdaftar',
@@ -118,6 +118,34 @@
         }
     }
 
+    function cek_file(id){
+        inputFile = document.getElementById(id);
+        pathFile = inputFile.value;
+        ekstensi = /(\.jpg|\.png|\.jpeg)$/i;
+        ukuran = inputFile.files[0].size;
+        // console.log(pathFile);
+        // console.log(inputFile.files[0].name);
+        // console.log(inputFile.files);
+
+        //ekstensi .jpg atau .png dan ukuran file kurang dari 500 Kb (512000 byte)
+        if(ekstensi.exec(pathFile) && ukuran <= 512000){
+        // console.log('cocok');
+
+        //untuk load gambar
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById(id+'Img').innerHTML = '<img src="'+e.target.result+'" style="width:150px"/>';
+            // document.getElementById(id+'Img').innerHTML = '<img src="'+e.target.result+'" style="width:350px"/>';
+        };
+        reader.readAsDataURL(inputFile.files[0]);
+        }
+        else{
+        alert('Silakan pilih file .jpg atau .png dengan ukuran maksimal 500 Kb');
+        document.getElementById(id).value = '';
+        return false;
+        }
+    }
+
 </script>
 
 
@@ -125,7 +153,7 @@
 <h3><b>Form Data Pegawai</b></h3>
 <br>
 
-<?php echo (isset($data['option']))?$this->Form->create($model, $data['option']):$this->Form->create($model,array('onsubmit'=>"", 'class'=>'form-horizontal'));
+<?php echo (isset($data['option']))?$this->Form->create($model, $data['option']):$this->Form->create($model,array('type'=>'file','onsubmit'=>"", 'class'=>'form-horizontal'));
 ?>
 
 <div class="col-md-6">
@@ -149,6 +177,8 @@
 	echo $this->Form->input('no_hp_wa', array('label' => array('text' => 'No. HP (WA)', 'class' => 'col-md-3 control-label'),'type' => 'text','value'=>$data[$model]['no_hp_wa'],'class' => 'form-control', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
 
 	echo $this->Form->input('status_pegawai', array('label' => array('text' => 'Status Pegawai', 'class' => 'col-md-3 control-label'),'type' => 'select','value'=>$data[$model]['status_pegawai'],'options'=>array('AKTIF'=>'AKTIF','NON AKTIF'=>'NON AKTIF'),'class' => 'form-control', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
+
+    echo $this->Form->input('ttd', array('label' => array('text' => 'QR Ttd', 'class' => 'col-sm-3 control-label'), 'type' => 'file', 'accept'=>'image/*', 'onchange'=>'cek_file(id)', 'class' => 'form-control', 'between'=>'<div class="col-sm-8">','after'=>'<div id="PegawaiTtdImg"></div></div>'));
 
 ?>
 

@@ -38938,3 +38938,43 @@ Stack Trace:
 #5 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PengajuanCutisController), Object(CakeRequest))
 #6 C:\xampp\htdocs\edaran\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #7 {main}
+2023-07-26 10:53:54 Error: [Error] Using $this when not in object context
+Stack Trace:
+#0 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Core\Configure.php(98): include()
+#1 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\bootstrap.php(432): Configure::bootstrap(true)
+#2 C:\xampp\htdocs\edaran\webroot\index.php(98): include('C:\\xampp\\htdocs...')
+#3 {main}
+2023-07-26 10:55:11 Error: [Error] Using $this when not in object context
+Stack Trace:
+#0 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Core\Configure.php(98): include()
+#1 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\bootstrap.php(432): Configure::bootstrap(true)
+#2 C:\xampp\htdocs\edaran\webroot\index.php(98): include('C:\\xampp\\htdocs...')
+#3 {main}
+2023-07-26 10:56:04 Error: [Error] Using $this when not in object context
+Stack Trace:
+#0 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Core\Configure.php(98): include()
+#1 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\bootstrap.php(432): Configure::bootstrap(true)
+#2 C:\xampp\htdocs\edaran\webroot\index.php(98): include('C:\\xampp\\htdocs...')
+#3 {main}
+2023-07-26 11:02:04 Error: [Error] Class 'FPDF' not found
+Request URL: /edaran/proses/pengajuan_cutis/report/b2322ce5-10e7-4fd5-b41c-e8186f825739
+Stack Trace:
+#0 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(968): View->render(NULL, NULL)
+#4 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#5 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PengajuanCutisController), Object(CakeRequest))
+#6 C:\xampp\htdocs\edaran\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2023-07-26 11:02:26 Error: [Error] Class 'FPDF' not found
+Request URL: /edaran/proses/pengajuan_cutis/report/b2322ce5-10e7-4fd5-b41c-e8186f825739
+Stack Trace:
+#0 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(968): View->render(NULL, NULL)
+#4 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#5 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PengajuanCutisController), Object(CakeRequest))
+#6 C:\xampp\htdocs\edaran\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}

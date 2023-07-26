@@ -1,6 +1,6 @@
 <?php 
         ob_start();
-		include ROOT."/edaran/Vendor/fpdf/fpdf.php";
+		include ROOT.$this->base."/Vendor/fpdf/fpdf.php";
 		$pdf=new FPDF('P','mm',array(215,330));
 		$pdf->SetTopMargin(5);
         // $pdf->SetAutoPageBreak(true);   

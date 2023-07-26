@@ -103,7 +103,7 @@
 
     function validateExist(val){
         // var val = $('#JenisCutiKodeCuti').val();
-        $.getJSON('/edaran/master_file/jenis_cutis/getCuti/'+val, function(data){
+        $.getJSON('<?php echo $url; ?>/master_file/jenis_cutis/getCuti/'+val, function(data){
 			if(data){
 				Swal.fire(
 							'Kode Cuti '+val+' sudah terdaftar',

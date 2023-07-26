@@ -39,6 +39,7 @@ class PegawaisController extends AppController
     {
         $model = $this->model;
 		$this->helpers[] = 'General';
+        $url = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].$this->base;
 
         $pangkat = array(''=>'Pilih Pangkat/Golongan',
                          'PPNPN'=>'PPNPN',
@@ -64,7 +65,11 @@ class PegawaisController extends AppController
 		if ($this->request->is('post') || $this->request->is('put')){
 			$this->request->data[$model]['create_by'] = $userid;
             $this->request->data[$model]['tmt_cpns'] = date('Y-m-d', strtotime($this->request->data[$model]['tmt_cpns']));
+            
             $nohp =  $this->request->data[$model]['no_hp_wa'];
+            $ttd = $this->request->data['Pegawai']['ttd'];
+            $ttd_name = $this->request->data[$model]['nip'].'ttd.'.substr($ttd['name'], -4);
+            $path = WWW_ROOT . 'img' . DS;
 
             if(!preg_match("/[^+0-9]/",trim($nohp))){
                 // cek apakah no hp karakter ke 1 dan 2 adalah angka 62
@@ -77,13 +82,18 @@ class PegawaisController extends AppController
                 }
             }
 
+            if(is_uploaded_file($ttd['tmp_name'])){
+				move_uploaded_file($ttd['tmp_name'], $path.$ttd_name);
+			}
             $this->request->data[$model]['no_hp_wa'] = $hp;
+            $this->request->data[$model]['ttd'] = $ttd_name;
+
 			// pr($this->request->data);exit;
 			$this->Master->__add('Pegawai', 'Pegawai', 'index');
 
 		}
 
-		$this->set(compact('model','pangkat'));
+		$this->set(compact('model','pangkat','url'));
     }
 
 
@@ -92,6 +102,8 @@ class PegawaisController extends AppController
 	{
 		$model = $this->model;
         $this->helpers[] = 'General';
+        $url = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].$this->base;
+
         $pangkat = array(''=>'Pilih Pangkat/Golongan',
                          'PPNPN'=>'PPNPN',
                          'Juru Muda (Ia)'=>'Juru Muda (Ia)',
@@ -117,12 +129,47 @@ class PegawaisController extends AppController
             if ($this->request->is('post') || $this->request->is('put')) {
                 $this->request->data[$model]['modi_by'] = $userid;
                 $this->request->data[$model]['tmt_cpns'] = date('Y-m-d', strtotime($this->request->data[$model]['tmt_cpns']));
+
+                $nohp =  $this->request->data[$model]['no_hp_wa'];
+                $ttd = $this->request->data['Pegawai']['ttd'];
+                $ttd_name = $this->request->data[$model]['nip'].'ttd.'.substr($ttd['name'], -4);
+                $path = WWW_ROOT . 'img' . DS;
+
+                if(!preg_match("/[^+0-9]/",trim($nohp))){
+                    // cek apakah no hp karakter ke 1 dan 2 adalah angka 62
+                    if(substr(trim($nohp), 0, 2)=="62"){
+                        $hp    =trim($nohp);
+                    }
+                    // cek apakah no hp karakter ke 1 adalah angka 0
+                    else if(substr(trim($nohp), 0, 1)=="0"){
+                        $hp    ="62".substr(trim($nohp), 1);
+                    }
+                }
+
+                //cek input file untuk SIUP
+			if(is_uploaded_file($ttd['tmp_name'])){
+				//cek file di db
+				if(is_file($path.$ttd_name)){
+					//hapus file di db
+					// foreach ($siup_files as $sf) {
+						// pr($sf);
+						unlink($path.$ttd_name);
+					// }
+					// exit;
+					// unlink($path.$siup_name);
+				}
+				//move file input ke db
+                move_uploaded_file($ttd['tmp_name'], $path.$ttd_name);
+			}
+
+                $this->request->data[$model]['no_hp_wa'] = $hp;
+                $this->request->data[$model]['ttd'] = $ttd_name;
                 // pr($this->request->data); exit;
                 $this->Master->__edit('Pegawai', $id, 'Pegawai', '', 'index');
             }
 
         $data = $this->$model->find('first', array('conditions' => array('Pegawai.id' => $id)));
-        $this->set(compact('model', 'data','pangkat'));
+        $this->set(compact('model', 'data','pangkat','url'));
 	}
 
 	function view($id = null){

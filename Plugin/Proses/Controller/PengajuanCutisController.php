@@ -38,6 +38,7 @@ class PengajuanCutisController extends AppController {
 		$this->loadModel('Pegawai');
 		$this->helpers[] = 'General';
 
+		$url = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].$this->base;
 		$dataUser = $this->Session->read('Auth.User');
 		$nip = $this->Session->read('Auth.User.nip');
 		$jenisCuti[''] = 'Pilih Jenis Cuti';
@@ -64,7 +65,7 @@ class PengajuanCutisController extends AppController {
 			$this->Master->__add('PengajuanCuti', 'PengajuanCuti', 'index');
 		}
 		
-		$this->set(compact('model','dataUser','jenisCuti','masaKerja','telp','dataAtasan'));
+		$this->set(compact('model','dataUser','jenisCuti','masaKerja','telp','dataAtasan','url'));
 
 	}
 
@@ -76,6 +77,7 @@ class PengajuanCutisController extends AppController {
 		$this->loadModel('Proses.DataCutiPegawai');
         $this->helpers[] = 'General';
 
+		$url = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].$this->base;
         $userid = $this->Session->read('Auth.User.id');
 		$jenisCuti[''] = 'Pilih Jenis Cuti';
 		$dataAtasan[''] = 'Pilih Atasan Langsung';
@@ -99,7 +101,7 @@ class PengajuanCutisController extends AppController {
 		$data['PengajuanCuti']['sampai_tanggal'] = date('m/d/Y', strtotime($data['PengajuanCuti']['sampai_tanggal']));
 		$data['PengajuanCuti']['sisa_cuti'] = $this->DataCutiPegawai->field('sisa_cuti_tahun_berjalan', 'nip IN ("'.$data['PengajuanCuti']['nip'].'")');
 		$telp = $this->Pegawai->field('no_hp_wa', 'nip IN ("'.$data['PengajuanCuti']['nip'].'")');
-        $this->set(compact('model', 'data','jenisCuti','telp','dataAtasan'));
+        $this->set(compact('model', 'data','jenisCuti','telp','dataAtasan','url'));
 	}
 
 	function view($id = null){

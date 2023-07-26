@@ -39,6 +39,7 @@ class DataCutiPegawaisController extends AppController
 		$this->loadModel('DataCutiPegawai');
 		$this->helpers[] = 'General';
 
+		$url = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].$this->base;
         $userid = $this->Session->read('Auth.User.id');
         if ($this->request->is('post') || $this->request->is('put')){
 			$this->request->data[$model]['create_by'] = $userid;
@@ -46,7 +47,7 @@ class DataCutiPegawaisController extends AppController
 			$this->Master->__add('DataCutiPegawai', 'DataCutiPegawai', 'index');
 		}
 
-		$this->set(compact('model'));
+		$this->set(compact('model','url'));
 	}
 
 	function view($id = null){
