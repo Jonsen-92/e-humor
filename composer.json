@@ -1,0 +1,10 @@
+{
+    "require": {
+        "cakephp/cakephp": "2.10.*",
+        "fpdf/fpdf": "^1.82",
+        "ultramsg/whatsapp-php-sdk": "^2.0"
+    },
+    "config": {
+        "vendor-dir": "Vendor/"
+    }
+}

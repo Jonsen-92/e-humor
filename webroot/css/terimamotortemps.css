@@ -1,0 +1,33 @@
+#TerimaMotortempDetail tbody tr th:nth-child(1){
+	width: 2%;
+}
+#TerimaMotortempDetail tbody tr th:nth-child(2){
+	width: 12.5%;
+}
+#TerimaMotortempDetail tbody tr th:nth-child(3){
+	width: 7%;
+}
+#TerimaMotortempDetail tbody tr th:nth-child(4){
+	width: 21.5%;
+}
+#TerimaMotortempDetail tbody tr td:nth-child(4) input{
+	width: 95%;
+}
+#TerimaMotortempDetail tbody tr th:nth-child(5){
+	width: 5%;
+}
+#TerimaMotortempDetail tbody tr th:nth-child(6){
+	width: 5%;
+}
+#TerimaMotortempDetail tbody tr th:nth-child(7){
+	width: 13%;
+}
+#TerimaMotortempDetail tbody tr th:nth-child(8){
+	width: 14%;
+}
+#TerimaMotortempDetail tbody tr th:nth-child(9){
+	width: 14%;
+}
+#TerimaMotortempDetail tbody tr th:nth-child(10){
+	width: 7%;
+}

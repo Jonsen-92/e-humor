@@ -1,0 +1,41 @@
+<?php //pr($model); pr($sField); pr($aField); pr($$model);?>
+<table cellpadding="0" cellspacing="0">
+	<tr>
+		<?php foreach ($aField as $j=>$v) : $label=str_replace('_',' ',substr($j,7)); $v=str_replace('__','.',$v);?>
+			<th><?php echo $this->Paginator->sort($label,$v);?></th>
+		<?php endforeach;?>
+	</tr>
+	<?php
+	$i = 0;
+	foreach ($$model as $v):
+		$class = null;
+		if ($i++ % 2 == 0) {
+			$class = ' class="altrow"';
+		}
+	?>
+	<tr<?php echo $class;?>>
+		<?php foreach ($aField as $j=>$k) : $l=explode('__',$k); ?>
+		<td><a id="<?php echo $k.$i;?>" href="javascript:defaultlov(<?php echo $i;?>);"><?php echo isset($l[1])?$v[$l[0]][$l[1]]:$v[$model][$l[0]]; ?></a>&nbsp;</td>
+                <?php endforeach;?>
+	</tr>
+<?php endforeach; ?>
+	</table>
+	<p>
+	<?php 
+	$this->Paginator->options(array('url' => $this->passedArgs, 'update' => '#isidataajax', 'evalScripts' => true));
+	echo $this->Paginator->counter(array(
+	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	));
+	?>	</p>
+
+	<div class="paging">
+		<?php 
+		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
+		echo ' &nbsp; '; 
+		echo $this->Paginator->numbers(array('separator' => ' | '));
+		echo ' &nbsp; '; 
+		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
+		?>
+	</div>
+	
+	<?php echo $this->Js->writeBuffer();?>

@@ -1,0 +1,628 @@
+table tr[class*="Detail"] input[type="text"][id*="ProductKode"] {
+  width: 40% !important;
+}
+#TerimaMotorNomorDo,#InvoicePesanId{
+  margin-left: 6px !important;
+}
+#InvoiceDpPricelist,#InvoiceDpKonsumen,#InvoiceTglPo,
+#SalesOrderDirectSales,#SalesOrderDirectSales{
+  width:  90% !important;
+}
+#InvoiceLeasKodeDesc,#InvoiceCabfincoKodeDesc,#PoscodePosKota{
+  width: 100% !important;
+}
+
+table#InvoiceDetail input[type="text"][id*="NomorMesin"]{
+  width: 65% !important;
+}
+
+table#PaketJasaDetail input[type="text"][id*="KodeJasa"]{
+  width: 65% !important;
+}
+
+/*Menu Paket*/
+table#PaketPartDetail tr.tr.trPaketPartDetail td:nth-child(1) {
+  width: 25% !important;
+}
+
+table#PaketPartDetail tr.tr.trPaketPartDetail td:nth-child(2) {
+  width: 40% !important;
+}
+
+table#PaketPartDetail tr.tr.trPaketPartDetail td:nth-child(3) {
+  width: 15% !important;
+}
+
+table#PaketPartDetail tr.tr.trPaketPartDetail td:nth-child(4) {
+  width: 12% !important;
+}
+
+table#PaketPartDetail input[type="text"][id*="PartNo"]{
+  width: 75% !important;
+}
+
+table#PaketPartDetail input[type="text"][id*="PartDesc"]{
+  width: 85% !important;
+}
+
+table#PaketPartDetail input[type="text"][id*="Hetpart"]{
+  width: 40% !important;
+}
+
+table#PaketPartDetail input[type="text"][id*="Qty"]{
+  width: 10% !important;
+}
+
+table#PurchaseOrderDetail input[type="text"][id*="PartNo"]{
+  width: 75% !important;
+}
+
+table#PurchaseOrderDetail input[type="text"][id*="Qty"]{
+  width: 70% !important;
+}
+
+
+/*Menu Purchase*/
+table#PurchaseDetail input[type="text"][id*="PartNo"]{
+  width: 65% !important;
+}
+
+table#PurchaseDetail input[type="text"][id*="PartDesc"]{
+  width: 85% !important;
+}
+
+table#PurchaseDetail input[type="text"][id*="Qty"]{
+  width: 75% !important;
+}
+
+table#PurchaseDetail input[type="text"][id*="QtyRec"]{
+  width: 75% !important;
+}
+
+table#PurchaseDetail input[type="text"][id*="QtyFak"]{
+  width: 70% !important;
+}
+
+table#PurchaseDetail input[type="text"][id*="QtyInv"]{
+  width: 75% !important;
+}
+
+table#PurchaseDetail input[type="text"][id*="DiscAmount"]{
+  width: 75% !important;
+} 
+
+table#PurchaseDetail input[type="text"][id*="Hetpart"]{
+  width: 75% !important;
+} 
+
+table#PurchaseDetail tr.tr.trPurchaseDetail input[type="text"][id*="PoNo"] {
+  width: 50% !important;
+}
+
+table#PurchaseDetail tr.tr.trPurchaseDetail td:nth-child(2) {
+  width: 13% !important;
+}
+
+table#PurchaseDetail tr.tr.trPurchaseDetail td:nth-child(3) {
+  width: 15% !important;
+}
+
+table#PurchaseDetail tr.tr.trPurchaseDetail td:nth-child(8) {
+  width: 12% !important;
+}
+
+table#PurchaseDetail tr.tr.trPurchaseDetail td:nth-child(9) {
+  width: 12% !important;
+}
+
+table#PurchaseDetail tr.tr.trPurchaseDetail td:nth-child(10) {
+  width: 12% !important;
+}
+
+table#ReceivingDetail input[type="text"][id*="PoNo"]{
+  width: 60% !important;
+}
+
+table#ReceivingDetail input[type="text"][id*="PartNo"]{
+  width: 60% !important;
+}
+
+table#StoringDetail input[type="text"][id*="PartNo"]{
+  width: 60% !important;
+}
+
+table#MutasiDetail input[type="text"][id*="PartNo"]{
+  width: 60% !important;
+}
+
+table#MutasiDetail input[type="text"][id*="FromRak"]{
+  width: 60% !important;
+}
+
+table#MutasiDetail input[type="text"][id*="ToRak"]{
+  width: 60% !important;
+}
+
+table#MutasiGudangDetail input[type="text"][id*="PartNo"]{
+  width: 60% !important;
+}
+
+table#MutasiGudangDetail input[type="text"][id*="RackCode"]{
+  width: 60% !important;
+}
+
+table#MohonFakturBundleDetail input[type="text"][id*="NomorMesin"]{
+  width: 65% !important;
+}
+/*Menu Discount Event*/
+table#DiscountEventJasa input[type="text"][id*="KodeJasa"]{
+  width: 65% !important;
+}
+
+table#DiscountEventJasa input[type="text"][id*="GroupCode"]{
+  width: 65% !important;
+}
+
+#DiscountEventJasa0PersenDisc,#DiscountEventJasa1PersenDisc,#DiscountEventJasa2PersenDisc,#DiscountEventJasa3PersenDisc,
+#DiscountEventJasa4PersenDisc,#DiscountEventJasa5PersenDisc,#DiscountEventJasa6PersenDisc,#DiscountEventJasa7PersenDisc,
+#DiscountEventJasa8PersenDisc,#DiscountEventJasa9PersenDisc,#DiscountEventJasa10PersenDisc,#DiscountEventJasa11PersenDisc{
+  width: 40% !important;
+}
+
+#DiscountEventJasa0RupiahDisc,#DiscountEventJasa1RupiahDisc,#DiscountEventJasa2RupiahDisc,#DiscountEventJasa3RupiahDisc,
+#DiscountEventJasa4RupiahDisc,#DiscountEventJasa5RupiahDisc,#DiscountEventJasa6RupiahDisc,#DiscountEventJasa7RupiahDisc,
+#DiscountEventJasa8RupiahDisc,#DiscountEventJasa9RupiahDisc,#DiscountEventJasa10RupiahDisc,#DiscountEventJasa11RupiahDisc{
+  width: 40% !important;
+}
+
+table#DiscountEventPart input[type="text"][id*="PartNo"]{
+  width: 65% !important;
+}
+
+table#DiscountEventPart input[type="text"][id*="CatCode"]{
+  width: 65% !important;
+}
+
+#DiscountEventPart0PersenDisc,#DiscountEventPart1PersenDisc,#DiscountEventPart2PersenDisc,#DiscountEventPart3PersenDisc,
+#DiscountEventPart4PersenDisc,#DiscountEventPart5PersenDisc,#DiscountEventPart6PersenDisc,#DiscountEventPart7PersenDisc,
+#DiscountEventPart8PersenDisc,#DiscountEventPart9PersenDisc,#DiscountEventPart10PersenDisc,#DiscountEventPart11PersenDisc{
+  width: 40% !important;
+}
+
+#DiscountEventPart0RupiahDisc,#DiscountEventPart1RupiahDisc,#DiscountEventPart2RupiahDisc,#DiscountEventPart3RupiahDisc,
+#DiscountEventPart4RupiahDisc,#DiscountEventPart5RupiahDisc,#DiscountEventPart6RupiahDisc,#DiscountEventPart7RupiahDisc,
+#DiscountEventPart8RupiahDisc,#DiscountEventPart9RupiahDisc,#DiscountEventPart10RupiahDisc,#DiscountEventPart11RupiahDisc{
+  width: 40% !important;
+}
+
+/*Menu Discount Member*/
+table#DiscountMemberJasa input[type="text"][id*="KodeJasa"]{
+  width: 65% !important;
+}
+
+table#DiscountMemberJasa input[type="text"][id*="GroupCode"]{
+  width: 65% !important;
+}
+
+#DiscountMemberJasa0PersenDisc,#DiscountMemberJasa1PersenDisc,#DiscountMemberJasa2PersenDisc,#DiscountMemberJasa3PersenDisc,
+#DiscountMemberJasa4PersenDisc,#DiscountMemberJasa5PersenDisc,#DiscountMemberJasa6PersenDisc,#DiscountMemberJasa7PersenDisc,
+#DiscountMemberJasa8PersenDisc,#DiscountMemberJasa9PersenDisc,#DiscountMemberJasa10PersenDisc,#DiscountMemberJasa11PersenDisc{
+  width: 40% !important;
+}
+
+#DiscountMemberJasa0RupiahDisc,#DiscountMemberJasa1RupiahDisc,#DiscountMemberJasa2RupiahDisc,#DiscountMemberJasa3RupiahDisc,
+#DiscountMemberJasa4RupiahDisc,#DiscountMemberJasa5RupiahDisc,#DiscountMemberJasa6RupiahDisc,#DiscountMemberJasa7RupiahDisc,
+#DiscountMemberJasa8RupiahDisc,#DiscountMemberJasa9RupiahDisc,#DiscountMemberJasa10RupiahDisc,#DiscountMemberJasa11RupiahDisc{
+  width: 40% !important;
+}
+
+table#DiscountMemberPart input[type="text"][id*="PartNo"]{
+  width: 65% !important;
+}
+
+table#DiscountMemberPart input[type="text"][id*="CatCode"]{
+  width: 65% !important;
+}
+
+#DiscountMemberPart0PersenDisc,#DiscountMemberPart1PersenDisc,#DiscountMemberPart2PersenDisc,#DiscountMemberPart3PersenDisc,
+#DiscountMemberPart4PersenDisc,#DiscountMemberPart5PersenDisc,#DiscountMemberPart6PersenDisc,#DiscountMemberPart7PersenDisc,
+#DiscountMemberPart8PersenDisc,#DiscountMemberPart9PersenDisc,#DiscountMemberPart10PersenDisc,#DiscountMemberPart11PersenDisc{
+  width: 40% !important;
+}
+
+#DiscountMemberPart0RupiahDisc,#DiscountMemberPart1RupiahDisc,#DiscountMemberPart2RupiahDisc,#DiscountMemberPart3RupiahDisc,
+#DiscountMemberPart4RupiahDisc,#DiscountMemberPart5RupiahDisc,#DiscountMemberPart6RupiahDisc,#DiscountMemberPart7RupiahDisc,
+#DiscountMemberPart8RupiahDisc,#DiscountMemberPart9RupiahDisc,#DiscountMemberPart10RupiahDisc,#DiscountMemberPart11RupiahDisc{
+  width: 40% !important;
+}
+
+table#PaketDetail input[type="text"][id*="PartNo"]{
+  width: 65% !important;
+}
+
+#MotorwarnaMtrKodeDesc,#MotorwarnaWrnKodeDesc{
+  width: 40% !important;
+}
+#PoscodeKotaIdDesc{
+  margin-left: -87px !important;
+  width: 111% !important;
+}
+
+tr.tr.trAktivasispkDetail > td > div input[type="text"]{
+    width: 100px !important;
+    position: static;
+}
+
+#AllocationDetail input[type="text"][id*="NomorMesin"]{
+  width: 50% !important;
+}
+
+#PurchaseOrderPoPeriodeMonth {
+    width: 315px;
+}
+ #PurchaseOrderPoPeriodeYear {
+    float: right;
+    margin-right: -368px;
+    margin-top: -39px;
+    position: sticky;
+    width: 150px;
+    margin-right: 0px;
+}
+
+/* SALES ORDER */
+#SalesOrderCustCodeDesc{
+  width: 148% !important;
+}
+
+#SalesOrderLeasKodeDesc,#SalesOrderCabfincoKodeDesc{
+  width: 195% !important;
+}
+
+#SalesOrderPesanDpReal,#SalesOrderPesanDp,#SalesOrderPesanNilaiAngs,#SalesOrderPesanLamaAngs{
+  width: 116% !important;
+}
+#SalesOrderPesanKomisi,#SalesOrderPesanDenda{
+  width: 85% !important;
+}
+
+#SalesOrderWilId,
+#SalesOrderMedKode,
+#SalesOrderSlsKode,
+#SalesOrderNomorSpk,
+#SalesOrderPaketCodeCashback,
+#SalesOrderPaketCodeDirectgift,
+#SalesOrderPaketCodeSalesDiscount,
+#SalesOrderCabfincoKode,
+#SalesOrderLeasKode,
+#SalesOrderCustCode, {
+    margin-left: 5px !important;
+}
+
+#SalesOrderWilIdDesc,
+#SalesOrderMedKodeDesc,
+#SalesOrderSlsKodeDesc,
+#SalesOrderPaketCodeCashbackDesc,
+#SalesOrderPaketCodeDirectgiftDesc,
+#SalesOrderPaketCodeSalesDiscountDesc,
+{
+    width: 128px !important;
+}
+
+table#SalesOrderDetail th:last-child,
+table#SalesOrderDetail td:last-child,
+table#SalesOrderDetail #addrow,
+table#SalesOrderDetail input[type="button"][id^="delrowSalesOrderDetail"]{
+  display: none;
+}
+
+table#SalesOrderDetail tr.tr.trSalesOrderDetail td {
+  width: 8% !important;
+}
+
+table#SalesOrderDetail tr.tr.trSalesOrderDetail td:nth-child(1) {
+  width: 17% !important;
+}
+
+table#SalesOrderDetail tr.tr.trSalesOrderDetail input[type="text"][id*="ProductKode"] {
+  width: 25% !important;
+}
+
+table#SalesOrderDetail tr.tr.trSalesOrderDetail input[type="text"][id*="ProductKodeDesc"] {
+  width: 55% !important;
+}
+
+table#SalesOrderDetail tr.tr.trSalesOrderDetail td:nth-child(2) {
+  width: 5% !important;
+}
+
+/* END SALES ORDER */
+
+  /*customer prospect */
+
+#LeadCustomerIdButton{
+
+  margin-left: -50px !important;
+
+}
+#LeadCustomerIdDesc{
+  margin-left: -52px !important;
+  width: 93% !important;
+}
+#LeadCustomerId{
+  width: 65% !important;
+  margin-left: 5px;
+}
+#LeadLeadKendaraanButton{
+
+  margin-left: -65px !important;
+}
+#LeadLeadKendaraan{
+  width: 58% !important;
+  margin-left: 5px !important;
+}
+#LeadLeadKendaraanDesc{
+  margin-left: -72px !important;
+  width: 104% !important;
+}
+#LeadLeadNpk{
+margin-left: 5px !important;
+    width: 58% !important;
+    }
+
+    #LeadLeadNpkButton{
+
+    margin-left: -65px !important;
+    }
+#LeadLeadNpkDesc{
+   margin-left: -72px !important;
+  width: 104% !important;
+
+}
+#LeadPosKode,#AllocationReturnAlokasiId,#PajakgabCustNama{
+  margin-left: 5px !important;
+}
+table#AllocationReturnDetail input[type="text"][id*="NomorMesin"]{
+  width: 65% !important;
+}
+table#AllocationReturnDetail input[type="text"][id*="ProductKode"],
+table#InvoiceDetail input[type="text"][id*="ProductKode"],
+table#InvoiceReturnDetail input[type="text"][id*="ProductKode"]{
+  width: 85% !important;
+}
+#MotorwarnaMtrKodeButton{
+  margin-left: -85px !important;
+}
+
+#MotorwarnaMtrKode,#PoscodeKotaId{
+  width: 40% !important;
+  margin-left: 5px !important;
+}
+#MotorwarnaMtrKodeDesc,#MotorwarnaWrnKodeDesc{
+  margin-left: -87px !important;
+  width: 111% !important;
+}
+
+#MotorwarnaWrnKode{
+  width: 40% !important;
+  margin-left: 5px !important;
+}
+#MotorwarnaWrnKodeButton,#PoscodeKotaIdButton{
+    margin-left: -85px !important;
+
+}
+
+table#PaketDetail input[id*="MtrKodeDesc"]{
+  width: 17% !important;
+  position: absolute !important;
+}
+
+#PurchaseOrderDetail0ProductKodeDesc{
+      /*width: 65% !important;*/
+}
+
+table#PurchaseOrderDetail tr.tr.trPurchaseOrderDetail td:nth-child(1) {
+  width: 20% !important;
+}
+
+table#PurchaseOrderDetail tr.tr.trPurchaseOrderDetail input[type="text"][id*="ProductKodeDesc"] {
+  width: 55% !important;
+}
+
+table#PurchaseOrderDetail tr.tr.trPurchaseOrderDetail td:nth-child(2){
+  width: 20% !important;
+}
+
+
+table#PurchaseOrderDetail tr.tr.trPurchaseOrderDetail td:nth-child(3){
+  width: 8% !important;
+}
+
+table#PurchaseOrderDetail tr.tr.trPurchaseOrderDetail td:nth-child(5){
+  width: 8% !important;
+}
+
+#PurchaseDetail0ProductKodeDesc{
+  /*width: 72% !important;*/
+}
+
+#PajakgabDetail0NomorFaktur{
+  width: 72% !important;
+}
+
+#TerimaMotorDetail0ProductKodeDesc{
+  width: 55% !important;
+}
+
+
+/* FAKTUR PENJUALAN */
+
+
+#InvoiceCustCodeDesc{
+
+  width: 140% !important;
+    margin-left: 38px !important;
+}
+#InvoiceCustCode{
+  margin-left: -1px !important;
+  width: 136% !important;
+}
+
+#InvoiceDirectSales{
+  margin-left: -6px !important;
+  width: 93% !important;
+}
+
+#InvoiceSlsKodeDesc,#InvoiceSlsKode,#InvoiceWilId,#InvoiceWilIdDesc{
+  width: 120% !important
+}
+#InvoiceHargaType,#InvoiceCustAlamat{
+  margin-left: -6px !important;
+  width: 93% !important;
+}
+
+/*RETUR FAKTUR PENJUALAN*/
+#InvoiceReturnRetJualId,#InvoiceReturnRetJualTanggal,#InvoiceReturnHargaType2,#InvoiceReturnDpPricelist,#InvoiceReturnNilaiAngs
+,#InvoiceReturnLamaAngs,#InvoiceReturnDirectSales2{
+  width: 95% !important;
+}
+
+#InvoiceReturnCustAlamat,#InvoiceReturnDpKonsumen{
+  width: 85% !important;
+}
+
+table#VoucherDetail tr.tr.trVoucherDetail td:nth-child(1) {
+  width: 15% !important;
+}
+
+#InvoiceReturnDetail0NomorMesin,#MohonFakturBundleDetail0NomorMesin,#TerimaPlatDetail0NomorMesin,#TerimaPlatDetail0NomorMesin
+,#TerimaBpkbDetail0NomorMesin,#SerahBpkbLeasingDetail0NomorMesin,#MutasiLokasiMotorDetail0NomorMesin,
+#MutasiOutMotorDetail0NomorMesin,#VoucherDetail0NomorFaktur,#VoucherDetail0InvoiceNomor,#VoucherDetail0PembelianNomor{
+  width: 50% !important;
+}
+
+
+/*surat jalan*/
+#SuratJalanPesanId{
+  margin-left: 5px !important;
+}
+#SuratJalanAccsdetail0AksKode,#SuratjalanReturnAccsdetail0AksKode{
+  width: 30% !important;
+}
+#SuratJalanAccsdetail0AksKodeDesc,#SuratjalanReturnAccsdetail0AksKodeDesc{
+  width: 67% !important;
+}
+#SuratJalanAccsdetail0Nqty,#SuratjalanReturnAccsdetail0Nqty{
+  width: 8% !important;
+}
+/*ENRTY DATA STNK*/
+
+#MohonFakturNomorMesin,#MohonFakturProductKode,#MohonFakturSlsKode,#MohonFakturLeasKode{
+  margin-left: 5px !important;
+}
+
+#MohonFakturMhnfakturId,#MohonFakturMhnfakturTgl,#MohonFakturMtrTypeDesc,#MohonFakturCustJenis,#MohonFakturVkotaMohon,#MohonFakturVpropMohon
+,#MohonFakturNomorInvoice,#MohonFakturPoLeasing,#MohonFakturCicilanActual,#QuesionerNseqnum,#QuesionerMhnfakturId,#QuesionerSlsMdKode,#QuesionerSlsPrKode{
+  width: 95% !important;
+}
+
+#MohonFakturProductKodeDesc,#MohonFakturSlsKodeDesc{
+  margin-left: -50px !important;
+    width: 179% !important;
+}
+
+#MohonFakturBundleDetail0VnamaMohon{
+  width: 90% !important;
+}
+
+/*MUTASI*/
+#MutasiLokasiMotorLokAwalDesc,#MutasiLokasiMotorLokAkhirDesc,#MutasiOutMotorWarehouseCodeFromDesc,#MutasiOutMotorBranchCodeToDesc{
+  width: 146% !important ;
+}
+
+#MutasiInMotorWarehouseCodeToDesc{
+  width: 149% !important;
+}
+
+#CustomerLeadIdDesc {
+    width: 153px !important;
+}
+
+#VoucherDetail0JualId {
+    width: 81px !important;
+}
+
+th {
+    /*width: 10% !important;*/
+}
+
+
+/*
+ <-- CSS CUSTOM SALES ORDER -->
+
+#SalesOrderHargaType2{
+   width: 94% !important;
+}
+
+#SalesOrderPesanDp {
+   width: 100% !important;
+    margin-left: 168px;
+    margin-top: -53px;
+}
+
+#SalesOrderPesanLamaAngs {
+    margin-left: 168px;
+    margin-top: -58px;
+}
+
+
+ #SalesOrderPesanNilaiAngs{
+ width: 94% !important;
+float: right;
+margin-right: -332px;
+}
+
+#SalesOrderLeasKodeButton {
+    margin-top: -55px !important;
+  margin-left: 175px;
+}
+
+label[for="SalesOrderLeasKode"] {
+    margin-top: -50px !important;
+}
+
+label[for="SalesOrderPesanDp"] {
+    margin-top: -50px !important;
+}
+label[for="SalesOrderPesanLamaAngs"] {
+    margin-top: -50px !important;
+}
+
+
+
+label[for="SalesOrderPesanDpReal"] {
+    float: right !important;
+    padding-left: 540px !important;
+    position: absolute;
+    width: 100%;
+    margin-top: 6px;
+}
+
+#SalesOrderPesanNilaiAngs{
+    margin-left: 176px;
+}
+
+
+label[for="SalesOrderPesanNilaiAngs"] {
+    float: right !important;
+    position: absolute;
+    margin-left: 528px;
+    margin-top: 5px;
+}
+
+ // Akhir custom css Sales order
+
+*/
+
+
+
+
