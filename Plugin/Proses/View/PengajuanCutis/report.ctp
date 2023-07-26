@@ -169,6 +169,8 @@
             
         $pdf->Cell(195, 4, '', "T", 1,"L", true);
 
+        //Perubahan I
+
 		$pdf->Output('Formulir Cuti.pdf','I');
 
 		ob_end_flush();
