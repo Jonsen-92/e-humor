@@ -86,6 +86,7 @@
 
     $(document).ready(function () {
         sisaCuti(0);
+        cutiSakit(0);
 	    $('#PengajuanCutiDariTanggal').datepicker({
 	       	// dateFormat: "dd-mm-yy",
             changeMonth: true,
@@ -132,6 +133,8 @@
             $('#PengajuanCutiSisaCuti').val(data+' Hari').hide();
             $('#labelsisacuti').hide();
         }
+
+        // cutiSakit(val);
     }
 
     function selisih(){
@@ -188,12 +191,53 @@
             }
         }
     }
+
+    function cek_file(id){
+        inputFile = document.getElementById(id);
+        pathFile = inputFile.value;
+        ekstensi = /(\.pdf|\.jpg|\.png|\.jpeg)$/i;
+        ekstensi2 = /(\.jpg|\.png|\.jpeg)$/i;
+        ukuran = inputFile.files[0].size;
+        // console.log(pathFile);
+        // console.log(inputFile.files[0].name);
+        // console.log(inputFile.files);
+
+        //ekstensi .jpg atau .png dan ukuran file kurang dari 500 Kb (512000 byte)
+        if(ekstensi.exec(pathFile) && ukuran <= 512000){
+        // console.log('cocok');
+
+        //untuk load gambar
+            if(ekstensi2.exec(pathFile)){
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('SuratSakit').innerHTML = '<img src="'+e.target.result+'" style="width:150px"/>';
+                };
+            reader.readAsDataURL(inputFile.files[0]);
+            }
+        }
+        else{
+        alert('Silakan pilih file .jpg atau .png atau .pdf dengan ukuran maksimal 500 Kb');
+        document.getElementById(id).value = '';
+        return false;
+        }
+    }
+
+    function cutiSakit(val){console.log(val);
+        if(val == 'CS'){
+            $('#PengajuanCutiSuratSakit').show();
+            $('#labelSuratSakit').show();
+        }
+        else{
+            $('#PengajuanCutiSuratSakit').hide();
+            $('#labelSuratSakit').hide();
+        }
+    }
 </script>
 
 <h3><b>Form Pengajuan Cuti</b></h3>
 <br>
 
-<?php echo (isset($data['option']))?$this->Form->create($model, $data['option']):$this->Form->create($model,array('onsubmit'=>"", 'class'=>'form-horizontal'));
+<?php echo (isset($data['option']))?$this->Form->create($model, $data['option']):$this->Form->create($model,array('type' => 'file','onsubmit'=>"", 'class'=>'form-horizontal'));
 ?>
 
 <div class="col-md-6">
@@ -219,13 +263,14 @@
 
         echo $this->Form->input('jabatan_ppk', array('label' => array('text' => 'Jabatan PPK', 'class' => 'col-md-3 control-label'),'type' => 'select', 'class' => 'form-control','options'=>$jabatanPPK,'readonly', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
 
-        echo $this->Form->input('kode_jenis_cuti', array('label' => array('text' => 'Jenis Cuti Yang Diambil', 'class' => 'col-md-3 control-label'),'type' => 'select','onchange'=>'sisaCuti(this.value);','options'=>$jenisCuti, 'class' => 'form-control', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
+        echo $this->Form->input('kode_jenis_cuti', array('label' => array('text' => 'Jenis Cuti Yang Diambil', 'class' => 'col-md-3 control-label'),'type' => 'select','onchange'=>'sisaCuti(this.value);cutiSakit(this.value)','options'=>$jenisCuti, 'class' => 'form-control', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
 
         echo $this->Form->input('desc_jenis_cuti', array('label' => false,'type' => 'hidden','class' => 'form-control', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
 
         echo $this->Form->input('sisa_cuti', array('label' => array('text' => 'Sisa Cuti','id'=>'labelsisacuti', 'class' => 'col-md-3 control-label'),'type' => 'text','readonly', 'class' => 'form-control', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
 
         echo $this->Form->input('sisa_cuti2', array('label' => array('text' => 'Sisa Cuti','id'=>'labelsisacuti', 'class' => 'col-md-3 control-label'),'type' => 'hidden','readonly', 'class' => 'form-control', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
+
     ?>
 </div>
 
@@ -242,6 +287,8 @@
         echo $this->Form->input('alasan_cuti', array('label' => array('text' => 'Alasan Cuti', 'class' => 'col-md-3 control-label'),'type' => 'textarea', 'class' => 'form-control', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
 
         echo $this->Form->input('alamat_menjalankan_cuti', array('label' => array('text' => 'Alamat Menjalankan Cuti', 'class' => 'col-md-3 control-label'),'type' => 'textarea', 'class' => 'form-control', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
+        
+        echo $this->Form->input('surat_sakit', array('label' => array('text' => 'Softcopy Surat Sakit','id'=>'labelSuratSakit', 'class' => 'col-sm-3 control-label'), 'type' => 'file', 'accept'=>array('image/*','pdf/*'), 'onchange'=>'cek_file(id)', 'class' => 'form-control', 'between'=>'<div class="col-sm-8">','after'=>'<div id="SuratSakit"></div></div>'));
     ?>
 </div>
 <br>

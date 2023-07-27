@@ -38978,3 +38978,51 @@ Stack Trace:
 #5 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PengajuanCutisController), Object(CakeRequest))
 #6 C:\xampp\htdocs\edaran\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #7 {main}
+2023-07-27 04:29:09 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'edaran.user_accounts' doesn't exist
+Request URL: /edaran/proses/pengajuan_cutis/report/b2322ce5-10e7-4fd5-b41c-e8186f825739
+Stack Trace:
+#0 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(502): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(468): DboSource->_execute('SELECT nip FROM...', Array)
+#2 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(715): DboSource->execute('SELECT nip FROM...', Array, Array)
+#3 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(641): DboSource->fetchAll('SELECT nip FROM...', Array)
+#4 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Model\Model.php(3489): DboSource->query('SELECT nip FROM...', false)
+#5 C:\xampp\htdocs\edaran\Plugin\Proses\Controller\PengajuanCutisController.php(179): Model->query('SELECT nip FROM...')
+#6 [internal function]: PengajuanCutisController->report('b2322ce5-10e7-4...')
+#7 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(PengajuanCutisController), Array)
+#8 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PengajuanCutisController), Object(CakeRequest))
+#10 C:\xampp\htdocs\edaran\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2023-07-27 04:29:28 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'edaran.group_users' doesn't exist
+Request URL: /edaran/proses/pengajuan_cutis/report/b2322ce5-10e7-4fd5-b41c-e8186f825739
+Stack Trace:
+#0 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(502): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(468): DboSource->_execute('SELECT nip FROM...', Array)
+#2 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(715): DboSource->execute('SELECT nip FROM...', Array, Array)
+#3 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(641): DboSource->fetchAll('SELECT nip FROM...', Array)
+#4 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Model\Model.php(3489): DboSource->query('SELECT nip FROM...', false)
+#5 C:\xampp\htdocs\edaran\Plugin\Proses\Controller\PengajuanCutisController.php(179): Model->query('SELECT nip FROM...')
+#6 [internal function]: PengajuanCutisController->report('b2322ce5-10e7-4...')
+#7 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(PengajuanCutisController), Array)
+#8 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PengajuanCutisController), Object(CakeRequest))
+#10 C:\xampp\htdocs\edaran\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2023-07-27 05:16:41 Error: [ArgumentCountError] Too few arguments to function PengajuanCutisController::getNamaCuti(), 0 passed and exactly 1 expected
+Request URL: /edaran/proses/pengajuan_cutis/getNamaCuti/
+Stack Trace:
+#0 [internal function]: PengajuanCutisController->getNamaCuti()
+#1 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(PengajuanCutisController), Array)
+#2 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PengajuanCutisController), Object(CakeRequest))
+#4 C:\xampp\htdocs\edaran\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2023-07-27 05:16:55 Error: [ArgumentCountError] Too few arguments to function PengajuanCutisController::getNamaCuti(), 0 passed and exactly 1 expected
+Request URL: /edaran/proses/pengajuan_cutis/getNamaCuti/
+Stack Trace:
+#0 [internal function]: PengajuanCutisController->getNamaCuti()
+#1 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(PengajuanCutisController), Array)
+#2 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\edaran\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PengajuanCutisController), Object(CakeRequest))
+#4 C:\xampp\htdocs\edaran\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

@@ -49,7 +49,7 @@
 
     echo $this->Form->input('username', array('label' => array('text' => 'Username', 'class' => 'col-sm-3 control-label'),'type' => 'text', 'value'=>$data[$model]['username'],'required','class' => 'form-control', 'between' => '<div class="col-sm-7">', 'after' => '</div>'));
 
-    echo $this->Form->input('password', array('label' => array('text' => 'Password', 'class' => 'col-sm-3 control-label'),'type' => 'password','value'=>$data[$model]['password'],'required', 'class' => 'form-control', 'between' => '<div class="col-sm-7">', 'after' => '</div>'));
+    echo $this->Form->input('password', array('label' => array('text' => 'Password', 'class' => 'col-sm-3 control-label'),'type' => 'password','required', 'class' => 'form-control', 'between' => '<div class="col-sm-7">', 'after' => '</div>'));
 
 	echo $this->Form->input('divisi', array('label' => array('text' => 'Divisi', 'class' => 'col-md-3 control-label'),'type' => 'select','value'=>$data[$model]['divisi'],'required','options'=>$divisi,'required', 'class' => 'form-control', 'between' => '<div class="col-sm-7">', 'after' => '</div>'));
 

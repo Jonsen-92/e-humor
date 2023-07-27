@@ -125,7 +125,7 @@ class UsersController extends AppController {
 				}
 			}
 			$this->request->data[$model]['password'] = Security::hash($this->request->data['UserAccount']['password'], null, true);
-			// pr($this->request->data);exit;
+			// pr($edit_group_user);exit;
 			// $this->$model->updateAll($edit_user, array($model.'.id' => $id));
 			$this->GroupsUsers->updateAll($edit_group_user, array('user_id' => $id));
 			$this->Master->__edit('UserAccount', $id, 'UserAccount', '', 'index');
