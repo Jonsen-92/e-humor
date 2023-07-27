@@ -212,7 +212,10 @@
                 reader.onload = function(e) {
                     document.getElementById('SuratSakit').innerHTML = '<img src="'+e.target.result+'" style="width:150px"/>';
                 };
-            reader.readAsDataURL(inputFile.files[0]);
+                reader.readAsDataURL(inputFile.files[0]);
+            }
+            else{
+                document.getElementById('SuratSakit').innerHTML = '';
             }
         }
         else{
