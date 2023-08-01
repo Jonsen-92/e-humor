@@ -28,7 +28,7 @@
 </style>
 <div class="index" style="overflow-x:auto;">
 	<br/>
-	<h2><?php echo __('Data Pengajuan Cuti');?></h2>
+	<h2><?php echo __('Data Izin Tidak Masuk Kerja');?></h2>
 	<div class="col-md-12">
 		<div class="row">
 	<?php echo $this->General->searchfiltering(array

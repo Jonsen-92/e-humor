@@ -2,7 +2,7 @@
         ob_start();
 		include ROOT.$this->base."/cutionline/Vendor/fpdf/fpdf.php";
 		$pdf=new FPDF('P','mm',array(215,330));
-		$pdf->SetTopMargin(10);
+		$pdf->SetTopMargin(5);
         $pdf->SetAutoPageBreak(false);   
 		$pdf->AddPage();
 		$pdf->SetFillColor(255,255,255);
@@ -22,8 +22,8 @@
 		$pdf->Cell(58, 4, 'Badan Peradilan yang berada dibawahnya',"", 1,"L", true);
         $pdf->Ln(10);
 
-        $pdf->SetFont('Arial','BU','12');
-		$pdf->Cell(195, 6, 'IZIN KELUAR KANTOR/IZIN TIDAK IKUT APEL',"", 1,"C", true);
+        $pdf->SetFont('Arial','BU','14');
+		$pdf->Cell(195, 6, 'IZIN KELUAR KANTOR',"", 1,"C", true);
         $pdf->Ln(10);
 
         $pdf->SetFont('Arial','','12');      
@@ -83,8 +83,9 @@
 
         $pdf->Cell(95, 6, 'Pemohon,',"", 0,"C", true);
         $pdf->Cell(100, 6, 'Pematangsiantar, '.date('d F Y', strtotime($data['IzinKeluarKantor']['tanggal_persetujuan'])),"", 1,"C", true);
-        $pdf->Cell(26, 6, $pdf->image('img/'.$data['IzinKeluarKantor']['nip_pemohon'].'ttd..png',50,150,16,16), "", 1,"C", false);
-        $pdf->Cell(26, 15, $pdf->image('img/'.$data['IzinKeluarKantor']['nip_pemberi_izin'].'ttd..png',145,150,16,16), "", 1,"C", false);
+        $pdf->Cell(26, 6, $pdf->image('img/'.$data['IzinKeluarKantor']['nip_pemohon'].'ttd..png',50,145,16,16), "", 1,"C", false);
+        $pdf->Cell(26, 15, $pdf->image('img/'.$data['IzinKeluarKantor']['nip_pemberi_izin'].'ttd..png',145,145,16,16), "", 1,"C", false);
+        $pdf->SetFont('Arial','BU','10');
         $pdf->Cell(95, 6, '( '.$data['IzinKeluarKantor']['nama_pemohon'].' )',"", 0,"C", true);
         $pdf->Cell(100, 6, '( '.$data['IzinKeluarKantor']['nama_pemberi_izin'].' )',"", 1,"C", true);
 
