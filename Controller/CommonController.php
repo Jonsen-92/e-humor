@@ -41,10 +41,10 @@ class CommonController extends Controller {
 	}
 
 	function underconstruction($message=null){
-		$this->layout='default';
+		$this->layout=false;
 		if (is_null($message)) $message='Halaman ini masih dalam tahap pengembangan';
 		$this->set(compact('message'));
-		$this->render('/elements/underconstruction');
+		$this->render('/Elements/underconstruction');
 	}
 
 	function getoptionchild($model, $parentField, $parentId, $title=null){
