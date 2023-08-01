@@ -43,6 +43,7 @@ class PegawaisController extends AppController
 
         $pangkat = array(''=>'Pilih Pangkat/Golongan',
                          'PPNPN'=>'PPNPN',
+                         'PPPK'=>'PPPK',
                          'Juru Muda (Ia)'=>'Juru Muda (Ia)',
                          'Juru Muda Tingkat I (Ib)'=>'Juru Muda Tingkat I (Ib)',
                          'Juru (Ic)'=>'Juru (Ic)',
@@ -106,6 +107,7 @@ class PegawaisController extends AppController
 
         $pangkat = array(''=>'Pilih Pangkat/Golongan',
                          'PPNPN'=>'PPNPN',
+                         'PPPK'=>'PPPK',
                          'Juru Muda (Ia)'=>'Juru Muda (Ia)',
                          'Juru Muda Tingkat I (Ib)'=>'Juru Muda Tingkat I (Ib)',
                          'Juru (Ic)'=>'Juru (Ic)',
@@ -132,7 +134,14 @@ class PegawaisController extends AppController
 
                 $nohp =  $this->request->data[$model]['no_hp_wa'];
                 $ttd = $this->request->data['Pegawai']['ttd'];
-                $ttd_name = $this->request->data[$model]['nip'].'ttd.'.substr($ttd['name'], -4);
+
+                if($ttd['tmp_name']){
+                    $ttd_name = $this->request->data[$model]['nip'].'ttd.'.substr($ttd['name'], -4);
+                }
+                else{
+                    $ttd_name = $this->request->data['Pegawai']['ttd2'];;
+                }
+                
                 $path = WWW_ROOT . 'img' . DS;
 
                 if(!preg_match("/[^+0-9]/",trim($nohp))){

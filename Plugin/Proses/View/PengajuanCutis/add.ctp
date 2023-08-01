@@ -252,9 +252,11 @@
 
         echo $this->Form->input('jabatan', array('label' => array('text' => 'Jabatan', 'class' => 'col-sm-3 control-label'),'type' => 'text', 'class' => 'form-control','value'=>$dataUser['jabatan'],'readonly', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
 
-        echo $this->Form->input('tmt_cpns_tahun', array('label' => array('text' => 'TMT (tahun)', 'class' => 'col-md-3 control-label'),'type' => 'hidden','readonly', 'value'=>$masaKerja->y,'class' => 'form-control', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
-        
-        echo $this->Form->input('masa_kerja', array('label' => array('text' => 'Masa Kerja', 'class' => 'col-md-3 control-label'),'type' => 'text', 'class' => 'form-control', 'readonly','value'=>$masaKerja->y.' Tahun '.$masaKerja->m.' Bulan', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
+        if($this->Session->read('Auth.User') == 'ASN'){
+            echo $this->Form->input('tmt_cpns_tahun', array('label' => array('text' => 'TMT (tahun)', 'class' => 'col-md-3 control-label'),'type' => 'hidden','readonly', 'value'=>$masaKerja->y,'class' => 'form-control', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
+            
+            echo $this->Form->input('masa_kerja', array('label' => array('text' => 'Masa Kerja', 'class' => 'col-md-3 control-label'),'type' => 'text', 'class' => 'form-control', 'readonly','value'=>$masaKerja->y.' Tahun '.$masaKerja->m.' Bulan', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
+        }
 
         echo $this->Form->input('unit_kerja', array('label' => array('text' => 'Unit Kerja', 'class' => 'col-md-3 control-label'),'type' => 'text', 'class' => 'form-control','value'=>$dataUser['unit_kerja'],'readonly', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
 

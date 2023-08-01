@@ -4,7 +4,7 @@ class UsersController extends AppController {
 
 	public $name = 'Users';
 	var $model='UserAccount';
-	public $uses=array('SysConfig.UserAccount');
+	public $uses=array('SysConfig.UserAccount','MasterFile.Pegawai');
 	var $components=array('Master');
 	// var $optUserAkses = array('0'=>'- Level User Akses -','1'=>'Pusat','2'=>'Divisi','3'=>'Office','4'=>'Company','5'=>'Branch');
 
@@ -125,7 +125,7 @@ class UsersController extends AppController {
 				}
 			}
 			$this->request->data[$model]['password'] = Security::hash($this->request->data['UserAccount']['password'], null, true);
-			// pr($edit_group_user);exit;
+			// pr($this->request->data);exit;
 			// $this->$model->updateAll($edit_user, array($model.'.id' => $id));
 			$this->GroupsUsers->updateAll($edit_group_user, array('user_id' => $id));
 			$this->Master->__edit('UserAccount', $id, 'UserAccount', '', 'index');
@@ -243,6 +243,7 @@ class UsersController extends AppController {
 						$groupId[]=$v['id'];
 					}
 
+					$jenisPegawai = $this->Pegawai->field('jenis_pegawai', "nip IN ('".$user['UserAccount']['nip']."')");
 					$this->Session->write('Auth.User.id', $user['UserAccount']['id']);
 					$this->Session->write('Auth.User.nip', $user['UserAccount']['nip']);
 					$this->Session->write('Auth.User.name', $user['UserAccount']['name']);
@@ -251,6 +252,7 @@ class UsersController extends AppController {
 					$this->Session->write('Auth.User.unit_kerja', $user['UserAccount']['unit_kerja']);
 					$this->Session->write('Auth.User.type_akses', $user['UserAccount']['type_akses']);
 					$this->Session->write('Auth.User.status_jabatan', $user['UserAccount']['status_jabatan']);
+					$this->Session->write('Auth.User.jenis_pegawai', $jenisPegawai);
 					$this->Session->write('Auth.Group', $groupId);
 
 					// update last login information

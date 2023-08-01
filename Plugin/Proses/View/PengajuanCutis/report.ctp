@@ -1,6 +1,6 @@
 <?php 
         ob_start();
-		include ROOT.$this->base."/Vendor/fpdf/fpdf.php";
+		include ROOT.$this->base."/cutionline/Vendor/fpdf/fpdf.php";
 		$pdf=new FPDF('P','mm',array(215,330));
 		$pdf->SetTopMargin(5);
         $pdf->SetAutoPageBreak(false);   
@@ -118,9 +118,9 @@
         $pdf->Cell(20, 4, 'Selama', "TLR", 0,"C", true);
         $pdf->Cell(45, 4, $data['PengajuanCuti']['jumlah_cuti'].'  (Hari/Bulan/Tahun)*', "TLR", 0,"C", true);
         $pdf->Cell(30, 4, 'Mulai Tanggal', "TLR", 0,"C", true);
-        $pdf->Cell(45, 4, date('d M y', strtotime($data['PengajuanCuti']['dari_tanggal'])), "TLR", 0,"C", true);
+        $pdf->Cell(45, 4, date('d F Y', strtotime($data['PengajuanCuti']['dari_tanggal'])), "TLR", 0,"C", true);
         $pdf->Cell(10, 4, 's/d', "TLR", 0,"C", true);
-        $pdf->Cell(45, 4, date('d M y', strtotime($data['PengajuanCuti']['sampai_tanggal'])), "TLR", 1,"C", true);
+        $pdf->Cell(45, 4, date('d F Y', strtotime($data['PengajuanCuti']['sampai_tanggal'])), "TLR", 1,"C", true);
         $pdf->Cell(195, 4, '', "T", 1,"L", true);
 
         //CATATAN CUTI

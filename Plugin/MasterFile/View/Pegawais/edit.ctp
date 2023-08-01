@@ -111,7 +111,10 @@
 
     function changeJenis(val){
         if(val == 'PPNPN'){
-            $('#PegawaiJenisPegawai').val(val);
+            $('#PegawaiJenisPegawai').val('PPNPN');
+        }
+        else if(val == 'PPPK'){
+            $('#PegawaiJenisPegawai').val('PPPK');
         }
         else{
             $('#PegawaiJenisPegawai').val('ASN');
@@ -158,7 +161,7 @@
 
 <div class="col-md-6">
 <?php 
-    echo $this->Form->input('jenis_pegawai', array('label' => array('text' => 'Jenis Pegawai', 'class' => 'col-sm-3 control-label'),'type' => 'hidden','value'=>$data[$model]['jenis_pegawai'],'readonly','class' => 'form-control', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
+    echo $this->Form->input('jenis_pegawai', array('label' => array('text' => 'Jenis Pegawai', 'class' => 'col-sm-3 control-label'),'type' => 'text','value'=>$data[$model]['jenis_pegawai'],'readonly','class' => 'form-control', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
 
 	echo $this->Form->input('nip', array('label' => array('text' => 'N I P', 'class' => 'col-sm-3 control-label'),'type' => 'text','readonly','value'=>$data[$model]['nip'],'class' => 'form-control', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
 
@@ -178,7 +181,9 @@
 
 	echo $this->Form->input('status_pegawai', array('label' => array('text' => 'Status Pegawai', 'class' => 'col-md-3 control-label'),'type' => 'select','value'=>$data[$model]['status_pegawai'],'options'=>array('AKTIF'=>'AKTIF','NON AKTIF'=>'NON AKTIF'),'class' => 'form-control', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
 
-    echo $this->Form->input('ttd', array('label' => array('text' => 'QR Ttd', 'class' => 'col-sm-3 control-label'), 'type' => 'file', 'accept'=>'image/*', 'onchange'=>'cek_file(id)', 'class' => 'form-control', 'between'=>'<div class="col-sm-8">','after'=>'<div id="PegawaiTtdImg"></div></div>'));
+    echo $this->Form->input('ttd', array('label' => array('text' => 'QR Ttd', 'class' => 'col-sm-3 control-label'), 'type' => 'file', 'accept'=>'image/*', 'onchange'=>'cek_file(id)', 'value'=>$data[$model]['ttd'], 'class' => 'form-control', 'between'=>'<div class="col-sm-8">','after'=>'<div id="PegawaiTtdImg"></div></div>'));
+
+    echo $this->Form->input('ttd2', array('label' => array('text' => 'TTD', 'class' => 'col-md-3 control-label'),'type' => 'hidden','value'=>$data[$model]['ttd'],'class' => 'form-control', 'between' => '<div class="col-sm-8">', 'after' => '</div>'));
 
 ?>
 

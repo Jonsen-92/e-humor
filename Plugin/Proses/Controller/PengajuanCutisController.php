@@ -44,7 +44,7 @@ class PengajuanCutisController extends AppController {
 		$jenisCuti[''] = 'Pilih Jenis Cuti';
 		$dataAtasan[''] = 'Pilih Atasan Langsung';
 		$jenisCuti += $this->JenisCuti->find('list', array('fields'=>array('kode_cuti','nama_cuti')));
-		$dataAtasan += $this->Pegawai->find('list', array('fields'=>array('nip','nama'),'conditions'=>array('nip NOT IN ("'.$nip.'")')));
+		$dataAtasan += $this->Pegawai->find('list', array('fields'=>array('nip','nama'),'conditions'=>array('nip NOT IN ("'.$nip.'")'),'order'=>'nama ASC'));
 		$tmtCpns = $this->Pegawai->field('tmt_cpns', 'nip IN ("'.$dataUser['nip'].'")');
 		$now = date('Y-m-d');
 		$a = new DateTime($tmtCpns);
@@ -214,19 +214,21 @@ class PengajuanCutisController extends AppController {
 			WHERE GU.group_id = 55');
 		}
 		$nip_PC = $PC[0]['UA']['nip'];
-		// pr($nip_PC);exit;
-// pr($dataSisaCuti);
-		$SCTL = 0;
-		$CSD = $dataSisaCuti['DataCutiPegawai']['jumlah_cuti_sudah_diambil'];
-		$CTL = $dataSisaCuti['DataCutiPegawai']['sisa_cuti_tahun_lalu'];
+		
+		$SCTL = $CTL = 0;
 		$CTI = $SCTI = 12;
-
-		if($CSD >= $CTL){
-			$SCTI = $CTI + $CTL - $CSD; 
+		if($dataSisaCuti){
+			$CSD = $dataSisaCuti['DataCutiPegawai']['jumlah_cuti_sudah_diambil'];
+			$CTL = $dataSisaCuti['DataCutiPegawai']['sisa_cuti_tahun_lalu'];
+	
+			if($CSD >= $CTL){
+				$SCTI = $CTI + $CTL - $CSD; 
+			}
+			else{
+				$SCTL = $CTL - $CSD;
+			}
 		}
-		else{
-			$SCTL = $CTL - $CSD;
-		}
+		
 // pr($SCTL);pr($SCTI);exit;
 		$this->set(compact('data','SCTL','SCTI','CTL','nip_PC'));
 	}

@@ -102,6 +102,9 @@
         if(val == 'PPNPN'){
             $('#PegawaiJenisPegawai').val(val);
         }
+        else if(val == 'PPPK'){
+            $('#PegawaiJenisPegawai').val('PPPK');
+        }
         else{
             $('#PegawaiJenisPegawai').val('ASN');
         }
